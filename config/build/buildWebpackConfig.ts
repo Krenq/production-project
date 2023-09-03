@@ -34,7 +34,7 @@ export function buildWebpackConfig(
       rules: buildLoaders(options),
     },
     // это свойство отвечает за то, чтоб мы не писали больше при импорте расширения, которые сюда укажем в extensions
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     // чтоб мы могли отследить ошибку в конкретном файле или функции при неудачной сборке webpack-dev-server
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,

@@ -7,5 +7,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     open: true,
     // чтоб дев-сервер не ругался на ситуацию, если мы обновляем страинцу не главную
     historyApiFallback: true,
+    hot: true,
   };
 }
