@@ -10,7 +10,7 @@ const App = () => {
   const { theme } = useTheme();
 
   return (
-    <div className={classNames({ mainCls: 'app', mods: {}, arrCls: [theme] })}>
+    <div className={classNames('app', {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
 

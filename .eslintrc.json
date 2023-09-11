@@ -7,6 +7,7 @@
     "standard-with-typescript",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:i18next/recommended",
     "plugin:prettier/recommended",
     "prettier"
   ],
@@ -29,7 +30,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "i18next", "prettier"],
   "rules": {
     "prettier/prettier": ["error"],
     "react/react-in-jsx-scope": "off",
@@ -49,6 +50,12 @@
     ],
     "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "promise/param-names": "off"
+    "promise/param-names": "off",
+    "i18next/no-literal-string": [
+      "error",
+      {
+        "markupOnly": true
+      }
+    ]
   }
 }
